@@ -4,13 +4,13 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @RestController
-public class HomepageController
+public class EventController
 {
-	@RequestMapping("/")
+	@RequestMapping("/event")
 	public String index()
 	{
 		//TODO
-		return "Homepage";
+		return "Event";
 	}
     
 }

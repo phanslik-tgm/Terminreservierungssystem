@@ -9,4 +9,12 @@ public class MainView
 		return navbar;
 		
 	}
+	
+	public String showEinladungen()
+	{
+		//TODO
+		String einladung = "";
+		return einladung;
+		
+	}
 }

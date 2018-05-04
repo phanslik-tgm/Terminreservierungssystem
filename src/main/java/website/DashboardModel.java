@@ -1,5 +1,6 @@
 package website;
 
-public class DashboardModel {
-
+public class DashboardModel
+{
+	
 }

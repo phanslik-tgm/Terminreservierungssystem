@@ -6,4 +6,9 @@ public class MainFunctions
 	{
 		//TODO
 	}
+	
+	public void deleteNotification() //Notifikation aus der DB löschen
+	{
+		//TODO
+	}
 }
