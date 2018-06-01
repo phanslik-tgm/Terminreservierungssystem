@@ -20,17 +20,17 @@
 .mtj.tmp/
 
 # Package Files #
-*.jar
+#*.jar
 *.war
 *.ear
-*.zip
+#*.zip
 *.tar.gz
 *.rar
 *.7z
 *.dmg
 *.gz
 *.iso
-*.jar
+#*.jar
 *.rar
 *.tar
 *.zip
