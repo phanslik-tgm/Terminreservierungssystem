@@ -1,18 +1,31 @@
 package website;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
 public class User
 {
-    int id;
-    boolean organisator;
-    String vorname;
-    String nachname;
-    String email;
-    String password;
 
+    @Id
+    @GeneratedValue
+    private Long id;
 
-    User(int id, boolean organisator, String vorname, String nachname, String email, String password)
+    //int id;
+    private boolean organisator;
+    private String vorname;
+    private String nachname;
+    private String email;
+    private String password;
+
+    protected User()
     {
-        this.id=id;
+    }
+
+    public User(int id, boolean organisator, String vorname, String nachname, String email, String password)
+    {
+        //this.id=id;
         this.organisator=organisator;
         this.vorname=vorname;
         this.nachname=nachname;
@@ -20,15 +33,15 @@ public class User
         this.password=password;
     }
 
-    public int getId()
-    {
-        return id;
-    }
+    // public int getId()
+    //{
+    //    return id;
+    //}
 
-    public void setId(int id)
-    {
-        this.id = id;
-    }
+    //public void setId(int id)
+    //{
+    //    this.id = id;
+    //}
 
     public boolean isOrganisator()
     {
