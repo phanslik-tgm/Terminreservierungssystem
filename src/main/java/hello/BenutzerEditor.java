@@ -102,6 +102,29 @@ public class BenutzerEditor extends VerticalLayout {
         firstName.selectAll();
     }
 
+    public  void checkLoginBenutzer(Benutzer b)
+    {
+        boolean bool;
+        boolean bool2;
+
+        //for (Benutzer l : repository.findByEmailStartsWithIgnoreCase(b.getEmail()))
+        //{
+         //   bool = true;
+        //}
+
+        //for (Benutzer l : repository.checkEmailAndPassword(b.getEmail(),b.getPassword()))
+        //{
+        //    bool = true;
+        //}
+
+
+
+        //if(bool=true)
+        //{
+        //    System.out.println("stimmt");
+        //}
+    }
+
     public void setChangeHandler(ChangeHandler h) {
         // ChangeHandler is notified when either save or delete
         // is clicked

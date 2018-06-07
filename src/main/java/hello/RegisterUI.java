@@ -14,25 +14,27 @@ public class RegisterUI extends UI
     private final BenutzerRepository repo;
 
     private final BenutzerEditor editor;
+    //private final BenutzerLogin login;
 
     //final Grid<Benutzer> grid;
 
     //final TextField filter;
 
-    private final Button addNewBtn;
+    private final Button registerBtn, loginBtn;
 
     public RegisterUI(BenutzerRepository repo, BenutzerEditor editor) {
         this.repo = repo;
         this.editor = editor;
         //this.grid = new Grid<>(Benutzer.class);
         //this.filter = new TextField();
-        this.addNewBtn = new Button("Register", FontAwesome.PLUS);
+        this.registerBtn = new Button("Register", FontAwesome.PLUS);
+        this.loginBtn = new Button("Login", FontAwesome.PLUS);
     }
 
     @Override
     protected void init(VaadinRequest request) {
         // build layout
-        HorizontalLayout actions = new HorizontalLayout( addNewBtn);
+        HorizontalLayout actions = new HorizontalLayout( registerBtn,loginBtn);
         VerticalLayout mainLayout = new VerticalLayout(actions, editor);
         setContent(mainLayout);
 
@@ -53,7 +55,8 @@ public class RegisterUI extends UI
         //});
 
         // Instantiate and edit new Customer the new button is clicked
-        addNewBtn.addClickListener(e -> editor.editBenutzer(new Benutzer(false, "", "", "",""))); //TODO// false muss von oben kommen
+        registerBtn.addClickListener(e -> editor.editBenutzer(new Benutzer(false, "", "", "",""))); //TODO// false muss von oben kommen
+        //loginBtn.addClickListener(e -> login.loginBenutzer();
 
         // Listen changes made by the editor, refresh data from backend
         editor.setChangeHandler(() -> {
