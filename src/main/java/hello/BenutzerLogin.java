@@ -91,17 +91,17 @@ public interface ChangeHandler {
         //   bool = true;
         //}
 
-        for (Benutzer l : repository.checkEmailAndPassword(b.getEmail(),b.getPassword()))
-        {
-            bool = true;
-        }
+        //for (Benutzer l : repository.checkEmailAndPassword(b.getEmail(),b.getPassword()))
+        //{
+         //   bool = true;
+        //}
 
 
 
-        if(bool=true)
-        {
-            System.out.println("stimmt");
-        }
+        //if(bool=true)
+        //{
+        //    System.out.println("stimmt");
+        //}
     }
 
     public void setChangeHandler(BenutzerEditor.ChangeHandler h) {

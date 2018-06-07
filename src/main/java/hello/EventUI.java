@@ -13,7 +13,7 @@ import java.util.Locale;
 import com.vaadin.shared.ui.datefield.DateTimeResolution;
 
 @SpringUI(path="/event")
-public class event extends UI {
+public class EventUI extends UI {
 
     private Label startdatelabel = new Label("Wählen Sie das Startdatum aus :");
     private Label enddatelabel = new Label("Wählen Sie das Enddatum aus :");
