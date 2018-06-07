@@ -10,5 +10,5 @@ import org.springframework.util.StringUtils;
 @SpringUI(path="/login")
 public class TestLoginUI
 {
-    
+
 }

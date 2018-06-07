@@ -22,7 +22,7 @@ public class Benutzer{
     private String password;
 
 
-    protected Benutzer() {
+    protected Benutzer(){
     }
 
     public Benutzer(boolean organisator, String firstName, String lastName, String email, String password) {
