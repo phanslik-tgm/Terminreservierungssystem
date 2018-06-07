@@ -15,7 +15,7 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 
 bootJar {
-    baseName = 'gs-spring-boot'
+    baseName = 'gs-crud-with-vaadin'
     version =  '0.1.0'
 }
 
@@ -29,22 +29,15 @@ sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
 dependencyManagement {
-    imports {
-        mavenBom 'com.vaadin:vaadin-bom:8.0.0'
-    }
+  imports {
+    mavenBom 'com.vaadin:vaadin-bom:8.0.0'
+  }
 }
 
 dependencies {
-    compile("org.springframework.boot:spring-boot-starter-web")
-    compile("org.springframework.boot:spring-boot-starter-thymeleaf")
-    // tag::actuator[]
-    compile("org.springframework.boot:spring-boot-starter-actuator")
-    // end::actuator[]
-    // tag::tests[]
-    testCompile("org.springframework.boot:spring-boot-starter-test")
-    // end::tests[]
     compile("org.springframework.boot:spring-boot-starter-data-jpa")
     compile("com.vaadin:vaadin-spring-boot-starter")
     compile("com.h2database:h2")
     testCompile("junit:junit")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
 }
