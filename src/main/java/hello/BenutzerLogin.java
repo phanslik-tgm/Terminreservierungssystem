@@ -1,7 +1,6 @@
 package hello;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import com.vaadin.data.Binder;
 import com.vaadin.event.ShortcutAction;
 import com.vaadin.icons.VaadinIcons;
@@ -13,6 +12,9 @@ import com.vaadin.ui.TextField;
 import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
+/**
+ * Wird in der BenutzerUI aufgerufen
+ */
 @SpringComponent
 @UIScope
 public class BenutzerLogin extends VerticalLayout
@@ -34,6 +36,11 @@ public class BenutzerLogin extends VerticalLayout
 
     Binder<Benutzer> binder = new Binder<>(Benutzer.class);
 
+    /**
+     * Constructor.
+     *
+     * @param repository In diesem repository koennen Benutzer gespeichert werden
+     */
     @Autowired
     public BenutzerLogin(BenutzerRepository repository)
     {
@@ -80,7 +87,11 @@ public interface ChangeHandler {
         // Select all text in firstName field automatically
         //firstName.selectAll();
     }
-
+    /**
+     * Hier wird abgeglichen ob das Passwort zur email passt
+     *
+     * @param b
+     */
     public  void checkLoginBenutzer(Benutzer b)
     {
         boolean bool;

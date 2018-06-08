@@ -4,6 +4,10 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+/**
+ * Diese Klasse bird Benoetigt, damit man ein Objekt davon in das Repository und die H2 Datenbank speichern kann.
+ *
+ */
 @Entity
 public class Benutzer{
 
@@ -25,6 +29,15 @@ public class Benutzer{
     protected Benutzer(){
     }
 
+    /**
+     * Constructor.
+     *
+     * @param organisator bool ob er events erstellen kann
+     * @param firstName String mit dem Vornamen
+     * @param lastName String mit dem Nachnamen
+     * @param email String mit der Email
+     * @param password String mit dem passwort --> Hash wird später implementiert
+     */
     public Benutzer(boolean organisator, String firstName, String lastName, String email, String password) {
         this.organisator = organisator;
         this.firstName = firstName;

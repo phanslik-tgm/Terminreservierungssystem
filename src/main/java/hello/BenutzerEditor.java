@@ -14,13 +14,8 @@ import com.vaadin.ui.VerticalLayout;
 import com.vaadin.ui.themes.ValoTheme;
 
 /**
- * A simple example to introduce building forms. As your real application is probably much
- * more complicated than this example, you could re-use this form in multiple places. This
- * example component is only used in VaadinUI.
- * <p>
- * In a real world application you'll most likely using a common super class for all your
- * forms - less code, better UX. See e.g. AbstractForm in Viritin
- * (https://vaadin.com/addon/viritin).
+ * Wird in der BenutzerUI aufgerufen
+ *
  */
 @SpringComponent
 @UIScope
@@ -28,9 +23,7 @@ public class BenutzerEditor extends VerticalLayout {
 
     private final BenutzerRepository repository;
 
-    /**
-     * The currently edited customer
-     */
+
     private Benutzer benutzer;
 
     /* Fields to edit properties in Customer entity */
@@ -48,6 +41,11 @@ public class BenutzerEditor extends VerticalLayout {
 
     Binder<Benutzer> binder = new Binder<>(Benutzer.class);
 
+    /**
+     * Constructor.
+     *
+     * @param repository In diesem repository koennen Benutzer gespeichert werden
+     */
     @Autowired
     public BenutzerEditor(BenutzerRepository repository) {
         this.repository = repository;

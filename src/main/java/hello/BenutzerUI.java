@@ -13,7 +13,10 @@ import com.vaadin.ui.HorizontalLayout;
 import com.vaadin.ui.TextField;
 import com.vaadin.ui.UI;
 import com.vaadin.ui.VerticalLayout;
-
+/**
+ * Diese klasse ist die GUI die alle benutzer anzeigt. Hier kann man sie auch bearbeiten und löschen.
+ * dank path="/benutzer" kann man diese seite über --> localhost:8080/benutzer <-- erreichen
+ */
 @SpringUI(path="/benutzer")
 public class BenutzerUI extends UI
 {
@@ -28,6 +31,12 @@ public class BenutzerUI extends UI
 
     private final Button addNewBtn;
 
+    /**
+     * Constructor.
+     *
+     * @param repo 
+     * @param editor
+     */
     public BenutzerUI(BenutzerRepository repo, BenutzerEditor editor) {
         this.repo = repo;
         this.editor = editor;

@@ -7,8 +7,15 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
+/**
+ * Application
+ *
+ * Wenn die Application gestartet wird, wird automatisch von gradle das projket gebuilded und der server gestartet.
+ * erreichbar unter -->  localhost:8080
+ *
+ */
 @SpringBootApplication
-public class Application {
+public class Application{
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
