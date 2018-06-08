@@ -13,11 +13,11 @@ public class Notification
 
     private String text;
 
-    private Benutzer benutzer;
+    //private Benutzer benutzer;
 
     public Notification(String text, Benutzer benutzer) {
         this.text = text;
-        this.benutzer = benutzer;
+        //this.benutzer = benutzer;
     }
 
     public Long getId() {
@@ -36,11 +36,11 @@ public class Notification
         this.text = text;
     }
 
-    public Benutzer getBenutzer() {
-        return benutzer;
-    }
+    //public Benutzer getBenutzer() {
+    //    return benutzer;
+    //}
 
-    public void setBenutzer(Benutzer benutzer) {
-        this.benutzer = benutzer;
-    }
+    //public void setBenutzer(Benutzer benutzer) {
+    //   this.benutzer = benutzer;
+    //}
 }

@@ -17,21 +17,22 @@ public class Event
 
     private String beschreibung;
 
-    private Collection<Benutzer> teilnehmer;
+    //private Collection<Benutzer> teilnehmer;
 
     private Date beginn;
 
     private Date ende;
 
-    private Benutzer ersteller;
+
+    //private Benutzer ersteller;
 
     public Event(String name, String beschreibung, Collection<Benutzer> teilnehmer, Date beginn, Date ende, Benutzer ersteller) {
         this.name = name;
         this.beschreibung = beschreibung;
-        this.teilnehmer = teilnehmer;
+        //this.teilnehmer = teilnehmer;
         this.beginn = beginn;
         this.ende = ende;
-        this.ersteller = ersteller;
+        //this.ersteller = ersteller;
     }
 
     public Long getId() {
@@ -58,13 +59,13 @@ public class Event
         this.beschreibung = beschreibung;
     }
 
-    public Collection<Benutzer> getTeilnehmer() {
-        return teilnehmer;
-    }
+    //public Collection<Benutzer> getTeilnehmer() {
+    //    return teilnehmer;
+    //}
 
-    public void setTeilnehmer(Collection<Benutzer> teilnehmer) {
-        this.teilnehmer = teilnehmer;
-    }
+    //public void setTeilnehmer(Collection<Benutzer> teilnehmer) {
+    //    this.teilnehmer = teilnehmer;
+    //}
 
     public Date getBeginn() {
         return beginn;
@@ -82,11 +83,11 @@ public class Event
         this.ende = ende;
     }
 
-    public Benutzer getErsteller() {
-        return ersteller;
-    }
+    //public Benutzer getErsteller() {
+    //    return ersteller;
+    //}
 
-    public void setErsteller(Benutzer ersteller) {
-        this.ersteller = ersteller;
-    }
+    //public void setErsteller(Benutzer ersteller) {
+    //    this.ersteller = ersteller;
+    //}
 }

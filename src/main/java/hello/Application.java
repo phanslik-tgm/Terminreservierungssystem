@@ -2,6 +2,7 @@ package hello;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -17,7 +18,7 @@ public class Application {
 	}
 
 	@Bean
-	public CommandLineRunner loadData(CustomerRepository repository, BenutzerRepository repository2) {
+	public CommandLineRunner loadData(CustomerRepository repository) {
 		return (args) -> {
 			// save a couple of customers
 			//repository.save(new Customer("Jack", "Bauer"));
@@ -25,7 +26,6 @@ public class Application {
 			//repository.save(new Customer("Kim", "Bauer"));
 			//repository.save(new Customer("David", "Palmer"));
 			//repository.save(new Customer("Michelle", "Dessler"));
-			//repository2.save(new Benutzer(true,"Michelle", "Dessler","y@y.y","test"));
 
 			// fetch all customers
 			log.info("Customers found with findAll():");
@@ -52,7 +52,5 @@ public class Application {
 			log.info("");
 		};
 	}
-
-
 
 }
