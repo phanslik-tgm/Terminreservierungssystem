@@ -14,6 +14,11 @@ public class EventUI2 extends UI {
 
     @Override
     protected void init(VaadinRequest request) {
-	    setContent(new Button("Click me", e -> Notification.show("Hello Spring+Vaadin user!")));
+	    setContent(new Button("Click me", e -> Notification.show("Neues Event")));
+	    
+    }
+    
+    private void listEvents() {
+    	grid.setItems(repo.findAll());
     }
 }
