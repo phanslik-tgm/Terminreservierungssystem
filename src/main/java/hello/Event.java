@@ -82,6 +82,12 @@ public class Event
     public void setEnde(Date ende) {
         this.ende = ende;
     }
+    
+    @Override
+    public String toString() {
+    	return String.format("Event[id=%d, name=%s, beschreibung=%s, beginn=%t, ende=%t]", 
+    			id, name, beschreibung, beginn, ende);
+    }
 
     //public Benutzer getErsteller() {
     //    return ersteller;
