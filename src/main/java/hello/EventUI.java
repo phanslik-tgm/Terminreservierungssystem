@@ -12,6 +12,10 @@ import java.time.LocalDateTime;
 import java.util.Locale;
 import com.vaadin.shared.ui.datefield.DateTimeResolution;
 
+/**
+ * Die EventUI Klasse erzeugt die GUI in der man ein neues Event erstellen kann.
+ * man erreicht diese seite mit: localhost:8080/event
+ */
 @SpringUI(path="/event")
 public class EventUI extends UI {
 
@@ -25,6 +29,10 @@ public class EventUI extends UI {
     private Button Home = new Button("Startseite");
     private Button Create_Event = new Button("Create Event");
 
+    /**
+     * init Methode
+     * @param request
+     */
     @Override
     protected void init(VaadinRequest request) {
 

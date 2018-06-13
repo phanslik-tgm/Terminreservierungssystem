@@ -7,6 +7,11 @@ import com.vaadin.spring.annotation.SpringUI;
 import com.vaadin.ui.*;
 import org.springframework.util.StringUtils;
 
+/**
+ * Diese Klasse erstellt eine Gui in der es möglich ist sich zu Registrieren --> einen neuen Benutzer anzulegen
+ * Diese GUI kann mittels 'localhost:8080/register' erreicht werden.
+ * Die erstellung des Benutzers kann auf 'localhost:8080/benutzer' geprüft werden
+ */
 @SpringUI(path="/register")
 public class RegisterUI extends UI
 {
@@ -22,6 +27,11 @@ public class RegisterUI extends UI
 
     private final Button registerBtn, loginBtn;
 
+    /**
+     * Constructor
+     * @param repo
+     * @param editor
+     */
     public RegisterUI(BenutzerRepository repo, BenutzerEditor editor) {
         this.repo = repo;
         this.editor = editor;
@@ -31,6 +41,10 @@ public class RegisterUI extends UI
         this.loginBtn = new Button("Login", FontAwesome.PLUS);
     }
 
+    /**
+     * init methode
+     * @param request
+     */
     @Override
     protected void init(VaadinRequest request) {
         // build layout
@@ -69,6 +83,11 @@ public class RegisterUI extends UI
     }
 
     // tag::listCustomers[]
+
+    /**
+     * macht nichts
+     * @param filterText
+     */
     void listBenutzer(String filterText) {
         if (StringUtils.isEmpty(filterText)) {
             //grid.setItems(repo.findAll());

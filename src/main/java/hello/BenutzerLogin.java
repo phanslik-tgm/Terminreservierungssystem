@@ -66,11 +66,17 @@ public class BenutzerLogin extends VerticalLayout
         setVisible(false);
 }
 
-public interface ChangeHandler {
+    /**
+     * ChangeHandler Interface
+     */
+    public interface ChangeHandler {
 
     void onChange();
 }
 
+    /**
+     * Login-Methode für den Benutzer
+     */
     public final void loginBenutzer()
     {
 
@@ -115,6 +121,11 @@ public interface ChangeHandler {
         //}
     }
 
+    /**
+     * setChangeHandler
+     *
+     * @param h
+     */
     public void setChangeHandler(BenutzerEditor.ChangeHandler h) {
         // ChangeHandler is notified when either save or delete
         // is clicked

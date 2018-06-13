@@ -73,6 +73,11 @@ public class BenutzerEditor extends VerticalLayout {
         void onChange();
     }
 
+    /**
+     *  Hier wird die GUI erstellt um einen Benutzer zu editieren
+     *
+     * @param b
+     */
     public final void editBenutzer(Benutzer b) {
         if (b == null) {
             setVisible(false);
@@ -100,6 +105,12 @@ public class BenutzerEditor extends VerticalLayout {
         firstName.selectAll();
     }
 
+    /**
+     * Diese Methode prüft ob ein die beim Login eingegeben Daten stimmen.
+     * Ob das passwort zu der Email passt.
+     *
+     * @param b
+     */
     public  void checkLoginBenutzer(Benutzer b)
     {
         boolean bool;
@@ -123,6 +134,11 @@ public class BenutzerEditor extends VerticalLayout {
         //}
     }
 
+    /**
+     * setChangeHandler
+     *
+     * @param h
+     */
     public void setChangeHandler(ChangeHandler h) {
         // ChangeHandler is notified when either save or delete
         // is clicked

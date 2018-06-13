@@ -31,18 +31,34 @@ public class Notification
         //this.benutzer = benutzer;
     }
 
+    /**
+     * Getter Für Id
+     * @return long id
+     */
     public Long getId() {
         return id;
     }
 
+    /**
+     * Setter für Id
+     * @param id
+     */
     public void setId(Long id) {
         this.id = id;
     }
 
+    /**
+     * Getter für den Textinhalt der Notification
+     * @return text
+     */
     public String getText() {
         return text;
     }
 
+    /**
+     * Setter für den Textinhalt der Notification
+     * @param text
+     */
     public void setText(String text) {
         this.text = text;
     }
