@@ -34,7 +34,7 @@ public class BenutzerUI extends UI
     /**
      * Constructor.
      *
-     * @param repo 
+     * @param repo
      * @param editor
      */
     public BenutzerUI(BenutzerRepository repo, BenutzerEditor editor) {

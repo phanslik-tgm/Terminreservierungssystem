@@ -13,6 +13,8 @@ import org.springframework.context.annotation.Bean;
  * Wenn die Application gestartet wird, wird automatisch von gradle das projket gebuilded und der server gestartet.
  * erreichbar unter -->  localhost:8080
  *
+ * Logger ist implementiert
+ *
  */
 @SpringBootApplication
 public class Application{
@@ -23,6 +25,14 @@ public class Application{
 		SpringApplication.run(Application.class);
 	}
 
+	/**
+	 * Bean
+	 * CommandLineRunner
+	 *
+	 * In dieser methode werden beim Start des Servers neue TestCostumer erstellt. Die Costumer werden später durch User ersetzt.
+     * Ausserdem werden hier die suchmethoden getestet.
+	 *
+	 */
 	@Bean
 	public CommandLineRunner loadData(CustomerRepository repository) {
 		return (args) -> {

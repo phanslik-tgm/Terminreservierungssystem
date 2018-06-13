@@ -7,10 +7,15 @@ import com.vaadin.ui.Grid;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.UI;
 
-@SpringUI
-public class EventUI2 extends UI {
-	 private final EventRepository repo;
-	    final Grid<Event> grid;
+@SpringUI(path="/event2")
+public class EventUI2 extends UI{
+
+	 //private final EventRepository repo;
+
+	 //final Grid<Event> grid;
+
+    public EventUI2() {
+    }
 
     @Override
     protected void init(VaadinRequest request) {
@@ -19,6 +24,6 @@ public class EventUI2 extends UI {
     }
     
     private void listEvents() {
-    	grid.setItems(repo.findAll());
+    	//grid.setItems(repo.findAll());
     }
 }
